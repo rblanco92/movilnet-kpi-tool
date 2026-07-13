@@ -20,17 +20,25 @@ promedios al vuelo sin cargar todo en memoria. Probado con +280 mil filas.
 ## Qué hace
 
 **UMTS · Comparativa Antes/Despues**
-- Subes los dos archivos (Parte 1 y Parte 2; se detectan solos por sus columnas).
+- Subes los archivos (mínimo una Parte 1 y una Parte 2; puedes subir **varias de
+  cada una** y se unen). Se detecta solo cuál es cada una y el orden no importa.
 - Eliges dos rangos de fechas: "Antes" y "Despues".
 - Agrupa por `cellid` + `sector`, combinando los sectores **1&4→1, 2&5→2, 3&6→3**.
 - Promedia 10 métricas y genera una sola tabla con columnas Antes | Despues lado
   a lado.
 
 **LTE · Promedios**
-- Subes un archivo LTE.
+- Subes uno o **varios** archivos LTE (se combinan).
 - Eliges un rango de fechas.
 - Extrae `eNodeB Function Name` y `Local Cell ID` de la columna "Cell", agrupa y
   promedia 6 métricas.
+
+**Formatos soportados (UMTS).** La app se adapta automáticamente a dos variantes:
+- Con o sin filas de **preámbulo** antes del encabezado (busca la fila cuyo
+  primer valor es "Start Time").
+- `cellid` y `sector` como columnas propias, **o** embebidos en la columna
+  `BSC6900UCell` (ej. `Label=CS3083D, CellID=30834` → `cellid=3083`, `sector=4`,
+  tomando `cellid = CellID // 10` y `sector = CellID % 10`).
 
 Los valores de texto tipo `NIL` se ignoran en los promedios (no cuentan como 0).
 

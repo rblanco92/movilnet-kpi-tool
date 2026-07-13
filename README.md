@@ -91,4 +91,10 @@ lib/
 
 ## Ajustes rápidos
 
-- **Cambiar 
+- **Cambiar métricas o nombres de columna:** edita las constantes `LTE_METRICS`
+  y `UMTS_METRICS` en `lib/process.js`.
+- **Cambiar la regla de sectores:** edita el objeto `SMAP` en `lib/process.js`.
+- **Cambiar promedio vs. suma÷1000:** el campo `agg` de cada métrica en
+  `UMTS_METRICS` (`"avg"` o `"sum1000"`).
+- **Colores/estilo del Excel:** constantes `RED`, `ANTES`, `DESPUES`, etc. en
+  `lib/process.js`.

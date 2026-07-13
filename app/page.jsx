@@ -376,4 +376,8 @@ export default function Page() {
 
       <div className="footer">
         <span>Movilnet · Procesador de KPIs LTE / UMTS</span>
-        <span>Proc
+        <span>Procesamiento 100% local en el navegador</span>
+      </div>
+    </div>
+  );
+}

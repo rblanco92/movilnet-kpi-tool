@@ -1,3 +1,5 @@
+import "./globals.css";
+
 export const metadata = {
   title: "Movilnet · Procesador de KPIs LTE / UMTS",
   description:

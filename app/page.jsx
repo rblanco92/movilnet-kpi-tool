@@ -345,7 +345,8 @@ export default function Page() {
               CS_ServiceDropRatio · PS_CallDropRatio_OptRF · Retención Datos ·
               Retención Voz · Accesibilidad Voz · Accesibilidad Datos ·
               U_HSDPA.MeanChThroughput.{" "}
-              <b>Suma÷1000 de:</b> CS_TRAFFIC_UMTS (Erl) · TraficoPS (MB).
+              <b>Suma de:</b> CS_TRAFFIC_UMTS (Erl). <b>Suma÷1000 de:</b>{" "}
+              TraficoPS (MB).
               <br />
               Sectores 1/4/7→1, 2/5/8→2, 3/6/9→3.
             </div>

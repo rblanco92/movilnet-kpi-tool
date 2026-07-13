@@ -27,8 +27,8 @@ promedios al vuelo sin cargar todo en memoria. Probado con +280 mil filas.
   **1/4/7→1, 2/5/8→2, 3/6/9→3**.
 - **Promedia** 9 métricas (Disponibilidad UMTS, U_HSDPA.UE.Mean.Cell,
   CS_ServiceDropRatio, PS_CallDropRatio_OptRF, Retención Datos, Retención Voz,
-  Accesibilidad Voz, Accesibilidad Datos, U_HSDPA.MeanChThroughput) y calcula la
-  **suma÷1000** de otras 2 (CS_TRAFFIC_UMTS en Erl y TraficoPS en MB).
+  Accesibilidad Voz, Accesibilidad Datos, U_HSDPA.MeanChThroughput), calcula la
+  **suma** de CS_TRAFFIC_UMTS (Erl) y la **suma÷1000** de TraficoPS (MB).
 - Genera una sola tabla con columnas Antes | Despues lado a lado.
 
 **LTE · Promedios**

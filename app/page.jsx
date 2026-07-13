@@ -107,8 +107,8 @@ export default function Page() {
   const [umtsFiles, setUmtsFiles] = useState([]);
   const [aStart, setAStart] = useState("2026-06-15");
   const [aEnd, setAEnd] = useState("2026-06-23");
-  const [bStart, setBStart] = useState("2026-07-03");
-  const [bEnd, setBEnd] = useState("2026-07-07");
+  const [bStart, setBStart] = useState("2026-07-06");
+  const [bEnd, setBEnd] = useState("2026-07-13");
 
   const [busy, setBusy] = useState(false);
   const [status, setStatus] = useState(null); // {type, msg}
@@ -175,7 +175,7 @@ export default function Page() {
           }}
         >
           UMTS · Comparativa Antes/Despues
-          <small>2 o más archivos · agrupa por cellid + sector (1&amp;4, 2&amp;5, 3&amp;6)</small>
+          <small>2 o más archivos · agrupa por cellid + sector (1/4/7, 2/5/8, 3/6/9)</small>
         </button>
         <button
           className={"tab" + (tab === "lte" ? " active" : "")}
@@ -341,11 +341,13 @@ export default function Page() {
               </div>
             </div>
             <div className="metrics-note" style={{ marginTop: 14 }}>
-              <b>10 métricas:</b> Disponibilidad UMTS · CS_TRAFFIC_UMTS (Erl) ·
-              TraficoPS (MB) · U_HSDPA.UE.Mean.Cell · CS_ServiceDropRatio ·
-              PS_CallDropRatio_OptRF · Retención Datos · Retención Voz ·
-              Accesibilidad Voz · Accesibilidad Datos. Sectores 1&amp;4→1,
-              2&amp;5→2, 3&amp;6→3.
+              <b>Promedio de:</b> Disponibilidad UMTS · U_HSDPA.UE.Mean.Cell ·
+              CS_ServiceDropRatio · PS_CallDropRatio_OptRF · Retención Datos ·
+              Retención Voz · Accesibilidad Voz · Accesibilidad Datos ·
+              U_HSDPA.MeanChThroughput.{" "}
+              <b>Suma÷1000 de:</b> CS_TRAFFIC_UMTS (Erl) · TraficoPS (MB).
+              <br />
+              Sectores 1/4/7→1, 2/5/8→2, 3/6/9→3.
             </div>
           </div>
 
@@ -374,8 +376,4 @@ export default function Page() {
 
       <div className="footer">
         <span>Movilnet · Procesador de KPIs LTE / UMTS</span>
-        <span>Procesamiento 100% local en el navegador</span>
-      </div>
-    </div>
-  );
-}
+        <span>Proc

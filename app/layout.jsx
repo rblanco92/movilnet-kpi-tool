@@ -21,7 +21,4 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
-    </html>
-  );
-}
+      <body>{children}</

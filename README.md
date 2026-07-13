@@ -23,9 +23,13 @@ promedios al vuelo sin cargar todo en memoria. Probado con +280 mil filas.
 - Subes los archivos (mínimo una Parte 1 y una Parte 2; puedes subir **varias de
   cada una** y se unen). Se detecta solo cuál es cada una y el orden no importa.
 - Eliges dos rangos de fechas: "Antes" y "Despues".
-- Agrupa por `cellid` + `sector`, combinando los sectores **1&4→1, 2&5→2, 3&6→3**.
-- Promedia 10 métricas y genera una sola tabla con columnas Antes | Despues lado
-  a lado.
+- Agrupa por `cellid` + `sector`, combinando los sectores
+  **1/4/7→1, 2/5/8→2, 3/6/9→3**.
+- **Promedia** 9 métricas (Disponibilidad UMTS, U_HSDPA.UE.Mean.Cell,
+  CS_ServiceDropRatio, PS_CallDropRatio_OptRF, Retención Datos, Retención Voz,
+  Accesibilidad Voz, Accesibilidad Datos, U_HSDPA.MeanChThroughput) y calcula la
+  **suma÷1000** de otras 2 (CS_TRAFFIC_UMTS en Erl y TraficoPS en MB).
+- Genera una sola tabla con columnas Antes | Despues lado a lado.
 
 **LTE · Promedios**
 - Subes uno o **varios** archivos LTE (se combinan).
@@ -87,8 +91,4 @@ lib/
 
 ## Ajustes rápidos
 
-- **Cambiar métricas o nombres de columna:** edita las constantes `LTE_METRICS`
-  y `UMTS_METRICS` en `lib/process.js`.
-- **Cambiar la regla de sectores:** edita el objeto `SMAP` en `lib/process.js`.
-- **Colores/estilo del Excel:** constantes `RED`, `ANTES`, `DESPUES`, etc. en
-  `lib/process.js`.
+- **Cambiar 
